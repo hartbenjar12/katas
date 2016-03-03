@@ -13,3 +13,9 @@ I'm a tester, so I'm a bit anal about checking inputs, which I admit should be d
 It saves a tiny bit of memory by not using temporary variables, but then builds a huge array.  It saves processing by avoiding recursion (while still being nicely succinct) but then recalculates the sequence length for each iteration, an unnecessary expense.
 
 It is, of course, completely untested.
+
+
+### running in node.js 
+In order to run, invoke with:
+
+    node --harmony_default_parameters  --use_strict
