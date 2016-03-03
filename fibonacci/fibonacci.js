@@ -1,12 +1,14 @@
+'use strict';
+
 function fibonacci(iterations) {
 	validate.iterations(iterations)
 
 	// the fibonacci sequence starts here
 	let sequence = [1, 2]
 
-	while(const length = sequence.length < iterations) {
+	while(sequence.length < iterations) {
 		// the next number in the sequence is the sum of the last two 
-		let next = sequence[length - 1] + sequence[length - 2]
+		let next = sequence.slice(-2).reduce( (y,z)=> { return y+z })
 		sequence.append(next)
 	}
 
