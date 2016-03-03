@@ -1,5 +1,14 @@
 Array.prototype.append = Array.prototype.push
 
+var validate = {
+	iterations: function(iterations) {
+		if (! Number.isInteger(iterations) || iterations < 2) { 
+			throw Error('fibonacci must be called with a number of iterations (2 or more)')
+		}
+	}
+}
+
+
 function fibonacci(iterations) {
 	validate.iterations(iterations)
 
@@ -13,14 +22,6 @@ function fibonacci(iterations) {
 	}
 
 	return sequence
-}
-
-var validate = {
-	iterations: function(iterations) {
-		if (! Number.isInteger(iterations) || iterations < 2) { 
-			throw Error('fibonacci must be called with a number of iterations (2 or more)')
-		}
-	}
 }
 
 module.exports = fibonacci
