@@ -6,8 +6,7 @@ function fibonacci(iterations=2) {
 
 	while(sequence.length < iterations) {
 		// the next number in the sequence is the sum of the last two 
-		let next = sequence[sequence.length - 1] + sequence[sequence.length - 2]
-		sequence.append(next)
+		sequence.append(sequence[sequence.length - 1] + sequence[sequence.length - 2])
 	}
 
 	return sequence
