@@ -2,7 +2,8 @@ Array.prototype.add = Array.prototype.push
 
 function fibonacci(iterations = 2) {
 	validate.iterations(iterations)
-	
+
+	// the fibonacci sequence starts here
 	let sequence = [1, 2]
 
 	while(sequence.length < iterations) {
